@@ -42,7 +42,7 @@ class DataRetriever:
 		response = urllib2.urlopen(url)
 		cr = csv.reader(response)
 
-		with wen(filename, 'wb') as csvfile: 
+		with open(filename, 'wb') as csvfile: 
 			cw = csv.writer(csvfile)
 			for row in cr: 
 				cw.writerow(row)
